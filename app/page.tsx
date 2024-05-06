@@ -52,7 +52,7 @@ function TubeLineStatus({ lineStatuses }: TubeLineStatusType) {
     </div>);
 }
 
-function TubeLine({id, lineStatuses, name }: TubeLineType) {
+function TubeLine({ id, lineStatuses, name }: TubeLineType) {
     return (
         <dl key={id} className="border border-gray-300 pl-2.5 flex justify-between relative sm:columns-2 gap-x-0 break-inside-avoid-column" role="heading">
             <TubeLineName id={id} name={name} />
