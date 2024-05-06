@@ -53,7 +53,7 @@ function TubeLineStatus({lineStatuses}: TubeLineStatusType) {
 
 function TubeLine({id, lineStatuses, name }: TubeLineType) {
     return (
-        <dl key={id} className="border border-gray-300 border-t-0 p-2.5 pl-5 flex justify-between relative sm:columns-2 gap-x-0 break-inside-avoid-column" role="heading">
+        <dl key={id} className="border border-gray-300 p-2.5 pl-5 flex justify-between relative sm:columns-2 gap-x-0 break-inside-avoid-column" role="heading">
             <TubeLineName id={id} name={name} />
             <TubeLineStatus lineStatuses={lineStatuses} />
         </dl>
