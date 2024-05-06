@@ -1,3 +1,5 @@
+import 'server-only'
+
 const API_URL = 'https://api.tfl.gov.uk/Line/Mode/Tube/Status';
 
 export async function fetchAPI() {
