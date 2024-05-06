@@ -53,7 +53,7 @@ function TubeLineStatus({lineStatuses}: TubeLineStatusType) {
 
 function TubeLine({id, lineStatuses, name }: TubeLineType) {
     return (
-        <dl key={id} className={`border border-gray-300 border-t-0 p-2.5 pl-5 flex justify-between relative sm:columns-2 gap-x-0 break-inside-avoid-column`} role="heading">
+        <dl key={id} className="border border-gray-300 border-t-0 p-2.5 pl-5 flex justify-between relative sm:columns-2 gap-x-0 break-inside-avoid-column" role="heading">
             <TubeLineName id={id} name={name} />
             <TubeLineStatus lineStatuses={lineStatuses} />
         </dl>
@@ -62,7 +62,7 @@ function TubeLine({id, lineStatuses, name }: TubeLineType) {
 
 async function TubeLines() {
     const tubeLines = await fetchAPI();
-    return (<section className="sm:columns-2 gap-x-0">
+    return (<section className="sm:columns-2 gap-x-2.5 m-2.5 break-all">
         {tubeLines.map(({ id, lineStatuses, name }: TubeLineType) => (
             <TubeLine id={id} lineStatuses={lineStatuses} name={name} />
         ))}
