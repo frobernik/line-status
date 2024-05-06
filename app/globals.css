@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.line {
-    border: 1px solid #ccc;
-    border-top: none;
-    padding: 10px 20px 10px;
-    position: relative;
-}
 .line::before {
     display: block;
     content: "";
