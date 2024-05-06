@@ -44,11 +44,11 @@ function TubeLineName({ id, name }: TubeLineNameType) {
     </div>);
 }
 
-function TubeLineStatus({lineStatuses}: TubeLineStatusType) {
+function TubeLineStatus({ lineStatuses }: TubeLineStatusType) {
     const hasDisruption = lineStatuses.filter(({ statusSeverityDescription }) => statusSeverityDescription !== GOOD_SERVICE);
     return (<div className={`p-2.5 w-1/2${hasDisruption.length > 0 ? ' line--disruption' : ''}`}>
         <dt className="sr-only" aria-hidden="true">Status</dt>
-        {lineStatuses.map(({statusSeverityDescription}) => <dd>{statusSeverityDescription}</dd>)}
+        {lineStatuses.map(({statusSeverityDescription}, i) => <dd key={i}>{statusSeverityDescription}</dd>)}
     </div>);
 }
 
