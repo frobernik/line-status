@@ -8,7 +8,7 @@ type TubeLineType = {
     name: string
 };
 
-function TubeLine({ id, lineStatuses, name }: { id: string, lineStatuses: any, name: string }) {
+function TubeLine({ id, lineStatuses, name }: TubeLineType) {
     console.log('lineStatuses ', lineStatuses);
     const hasDisruption = lineStatuses.filter(({ statusSeverityDescription }: { statusSeverityDescription: string }) => statusSeverityDescription !== GOOD_SERVICE);
     return (<li key={id} className={`line line--${id}`}>{name} | {hasDisruption.length > 0 ? hasDisruption[0].statusSeverityDescription : GOOD_SERVICE}</li>);
@@ -16,7 +16,7 @@ function TubeLine({ id, lineStatuses, name }: { id: string, lineStatuses: any, n
 
 async function TubeLines() {
     const tubeLines = await fetchAPI();
-    return (<ul className="sm:columns-2">{tubeLines.map(({ id, lineStatuses, name }: TubeLineType) => (<TubeLine id={id} lineStatuses={lineStatuses} name={name} />))}</ul>)
+    return (<ul className="sm:columns-2 gap-x-0">{tubeLines.map(({ id, lineStatuses, name }: TubeLineType) => (<TubeLine id={id} lineStatuses={lineStatuses} name={name} />))}</ul>)
 }
 
 export default async function Home() {
