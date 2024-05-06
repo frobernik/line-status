@@ -65,7 +65,7 @@ async function TubeLines() {
     const tubeLines = await fetchAPI();
     return (<section className="sm:columns-2 gap-x-2.5 m-2.5 break-all">
         {tubeLines.map(({ id, lineStatuses, name }: TubeLineType) => (
-            <TubeLine id={id} lineStatuses={lineStatuses} name={name} />
+            <TubeLine key={id} id={id} lineStatuses={lineStatuses} name={name} />
         ))}
     </section>)
 }
