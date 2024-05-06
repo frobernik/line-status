@@ -24,35 +24,38 @@ dl:first-child {
     bottom: 0;
 }
 .line--bakerloo::before {
-    background-color: rgb(137, 78, 36);
+    background-color: #894E24FF;
 }
 .line--central::before {
-    background-color: rgb(220, 36, 31);
+    background-color: #DC241FFF;
 }
 .line--circle::before {
-    background-color: rgb(255, 206, 0);
+    background-color: #FFCE00FF;
 }
 .line--district::before {
-    background-color: rgb(0, 114, 41);
+    background-color: #007229FF;
 }
 .line--hammersmith-city::before {
-    background-color: rgb(215, 153, 175);
+    background-color: #D799AFFF;
 }
 .line--jubilee::before {
-    background-color: rgb(106, 114, 120);
+    background-color: #6A7278FF;
 }
 .line--metropolitan::before {
-    background-color: rgb(117, 16, 86);
+    background-color: #751056FF;
 }
 .line--northern::before {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
 }
 .line--piccadilly::before {
-    background-color: rgb(0, 25, 168);
+    background-color: #0019A8FF;
 }
 .line--victoria::before {
-    background-color: rgb(0, 160, 226);
+    background-color: #00A0E2FF;
 }
 .line--waterloo-city::before {
-    background-color: rgb(118, 208, 189);
+    background-color: #76D0BDFF;
+}
+.line--disruption {
+    background-color: #FaF5E1;
 }
